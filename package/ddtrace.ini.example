@@ -1,0 +1,2 @@
+[ddtrace]
+extension=/usr/local/opt/datadog-php/extensions/ddtrace-11111.so

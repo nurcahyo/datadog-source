@@ -1,0 +1,56 @@
+src/ext/ddtrace.lo: /usr/local/opt/datadog-php/src/ext/ddtrace.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/ddtrace.c -o src/ext/ddtrace.lo 
+src/dogstatsd/client.lo: /usr/local/opt/datadog-php/src/dogstatsd/client.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/dogstatsd/client.c -o src/dogstatsd/client.lo 
+src/ext/arrays.lo: /usr/local/opt/datadog-php/src/ext/arrays.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/arrays.c -o src/ext/arrays.lo 
+src/ext/circuit_breaker.lo: /usr/local/opt/datadog-php/src/ext/circuit_breaker.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/circuit_breaker.c -o src/ext/circuit_breaker.lo 
+src/ext/comms_php.lo: /usr/local/opt/datadog-php/src/ext/comms_php.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/comms_php.c -o src/ext/comms_php.lo 
+src/ext/compat_string.lo: /usr/local/opt/datadog-php/src/ext/compat_string.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/compat_string.c -o src/ext/compat_string.lo 
+src/ext/coms.lo: /usr/local/opt/datadog-php/src/ext/coms.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/coms.c -o src/ext/coms.lo 
+src/ext/configuration.lo: /usr/local/opt/datadog-php/src/ext/configuration.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/configuration.c -o src/ext/configuration.lo 
+src/ext/configuration_php_iface.lo: /usr/local/opt/datadog-php/src/ext/configuration_php_iface.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/configuration_php_iface.c -o src/ext/configuration_php_iface.lo 
+src/ext/dispatch.lo: /usr/local/opt/datadog-php/src/ext/dispatch.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/dispatch.c -o src/ext/dispatch.lo 
+src/ext/dispatch_setup.lo: /usr/local/opt/datadog-php/src/ext/dispatch_setup.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/dispatch_setup.c -o src/ext/dispatch_setup.lo 
+src/ext/dogstatsd_client.lo: /usr/local/opt/datadog-php/src/ext/dogstatsd_client.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/dogstatsd_client.c -o src/ext/dogstatsd_client.lo 
+src/ext/engine_hooks.lo: /usr/local/opt/datadog-php/src/ext/engine_hooks.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/engine_hooks.c -o src/ext/engine_hooks.lo 
+src/ext/env_config.lo: /usr/local/opt/datadog-php/src/ext/env_config.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/env_config.c -o src/ext/env_config.lo 
+src/ext/logging.lo: /usr/local/opt/datadog-php/src/ext/logging.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/logging.c -o src/ext/logging.lo 
+src/ext/memory_limit.lo: /usr/local/opt/datadog-php/src/ext/memory_limit.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/memory_limit.c -o src/ext/memory_limit.lo 
+src/ext/mpack/mpack.lo: /usr/local/opt/datadog-php/src/ext/mpack/mpack.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/mpack/mpack.c -o src/ext/mpack/mpack.lo 
+src/ext/random.lo: /usr/local/opt/datadog-php/src/ext/random.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/random.c -o src/ext/random.lo 
+src/ext/request_hooks.lo: /usr/local/opt/datadog-php/src/ext/request_hooks.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/request_hooks.c -o src/ext/request_hooks.lo 
+src/ext/serializer.lo: /usr/local/opt/datadog-php/src/ext/serializer.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/serializer.c -o src/ext/serializer.lo 
+src/ext/signals.lo: /usr/local/opt/datadog-php/src/ext/signals.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/signals.c -o src/ext/signals.lo 
+src/ext/span.lo: /usr/local/opt/datadog-php/src/ext/span.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/span.c -o src/ext/span.lo 
+src/ext/third-party/mt19937-64.lo: /usr/local/opt/datadog-php/src/ext/third-party/mt19937-64.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/third-party/mt19937-64.c -o src/ext/third-party/mt19937-64.lo 
+src/ext/php7/dispatch.lo: /usr/local/opt/datadog-php/src/ext/php7/dispatch.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/php7/dispatch.c -o src/ext/php7/dispatch.lo 
+src/ext/php7/engine_hooks.lo: /usr/local/opt/datadog-php/src/ext/php7/engine_hooks.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Wall -std=gnu11 -I. -I/usr/local/opt/datadog-php $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /usr/local/opt/datadog-php/src/ext/php7/engine_hooks.c -o src/ext/php7/engine_hooks.lo 
+$(phplibdir)/ddtrace.la: ./ddtrace.la
+	$(LIBTOOL) --mode=install cp ./ddtrace.la $(phplibdir)
+
+./ddtrace.la: $(shared_objects_ddtrace) $(DDTRACE_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS)  -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_ddtrace) $(DDTRACE_SHARED_LIBADD)
+
