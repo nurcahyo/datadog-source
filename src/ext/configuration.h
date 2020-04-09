@@ -41,7 +41,6 @@ void ddtrace_config_shutdown(void);
 #endif
 
 #define DD_CONFIGURATION                                                                                              \
-     CHAR(get_dd_trace_agent_url, "DD_TRACE_AGENT_URL", "")                                                           \
      CHAR(get_dd_agent_host, "DD_AGENT_HOST", "localhost")                                                            \
      CHAR(get_dd_dogstatsd_port, "DD_DOGSTATSD_PORT", "8125")                                                         \
      INT(get_dd_trace_agent_port, "DD_TRACE_AGENT_PORT", 8126)                                                        \
@@ -68,7 +67,8 @@ void ddtrace_config_shutdown(void);
      BOOL(get_dd_trace_debug_curl_output, "DD_TRACE_DEBUG_CURL_OUTPUT", false)                                        \
      INT(get_dd_trace_beta_high_memory_pressure_percent, "DD_TRACE_BETA_HIGH_MEMORY_PRESSURE_PERCENT", 80,            \
          "reaching this percent threshold of a span buffer will trigger background thread "                           \
-         "to attempt to flush existing data to trace agent")
+         "to attempt to flush existing data to trace agent")                                                          \
+     CHAR(get_dd_trace_agent_url, "DD_TRACE_AGENT_URL", '\0')
 
 // render all configuration getters and define memoization struct
 #include "configuration_render.h"

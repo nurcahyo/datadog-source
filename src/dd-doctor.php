@@ -123,9 +123,10 @@ function check_agent_connectivity()
     render('Configured Agent host', $host);
     $port = env('DD_TRACE_AGENT_PORT') ?: '8126';
     render('Configured Agent port', $port);
-
+    $traceAgentUrl = getenv("DD_TRACE_AGENT_URL") ?: "http://" . $host . ":" . $port;
+    render('Configured Trace Agent url', $traceAgentUrl);
     $verbose = fopen('php://temp', 'w+b');
-    $ch = curl_init("http://" . $host . ":" . $port . "/v0.3/traces");
+    $ch = curl_init($traceAgentUrl . "/v0.3/traces");
     curl_setopt($ch, CURLOPT_TIMEOUT, 5);
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

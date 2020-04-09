@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "configuration.h": "c",
+        "configuration_render.h": "c",
+        "env_config.h": "c",
+        "configuration_php_iface.h": "c",
+        "atomic": "c",
+        "cstdint": "c",
+        "compatibility.h": "c"
+    }
+}

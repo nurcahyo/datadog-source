@@ -638,26 +638,27 @@ static void _dd_curl_set_hostname(CURL *curl) {
     if (port <= 0 || port > 65535) {
         port = 8126;
     }
-    char *trace_agent_url = get_dd_trace_agent_url();
 
-    if (strcmp(trace_agent_url, "")) {
-        curl_easy_setopt(curl, CURLOPT_URL, trace_agent_url);
-    }
-    
-    else if (hostname) {
+    char *url = get_dd_trace_agent_url();
+    ddtrace_log_debug(url);
+    free(url);
+    if (hostname) {
         size_t agent_url_len =
             strlen(hostname) + sizeof(HOST_FORMAT_STR) + 10;  // port digit allocation + some headroom
         char *agent_url = malloc(agent_url_len);
         snprintf(agent_url, agent_url_len, HOST_FORMAT_STR, hostname, (uint32_t)port);
 
         curl_easy_setopt(curl, CURLOPT_URL, agent_url);
+        char *message = malloc(16 + strlen(agent_url));
+        sprintf(message, "Send request to %s", agent_url);
+        ddtrace_log_debug(message);
+        free(message);
+        free(hostname);
         free(agent_url);
-    } else {
+    }
+    else {
         curl_easy_setopt(curl, CURLOPT_URL, "http://localhost:8126/v0.4/traces");
     }
-
-    free(hostname);
-    free(trace_agent_url);
 }
 
 static struct timespec _dd_deadline_in_ms(uint32_t ms) {
@@ -732,7 +733,7 @@ static void _dd_curl_send_stack(struct _writer_loop_data_t *writer, ddtrace_coms
         curl_easy_setopt(writer->curl, CURLOPT_VERBOSE, get_dd_trace_agent_debug_verbose_curl());
 
         res = curl_easy_perform(writer->curl);
-
+        ddtrace_log_debug("Request sent");
         if (res != CURLE_OK) {
             ddtrace_bgs_logf("[bgs] curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
         } else if (get_dd_trace_debug_curl_output()) {
