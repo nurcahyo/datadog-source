@@ -607,7 +607,8 @@ static ddtrace_coms_stack_t *_dd_coms_attempt_acquire_stack(void) {
     return stack;
 }
 
-#define HOST_FORMAT_STR "http://%s:%u/v0.4/traces"
+#define TRACE_PATH_STR "/v0.4/traces"
+#define HOST_FORMAT_STR "http://%s:%u" TRACE_PATH_STR
 
 atomic_uintptr_t memoized_agent_curl_headers;
 
@@ -640,8 +641,18 @@ static void _dd_curl_set_hostname(CURL *curl) {
     }
 
     char *url = get_dd_trace_agent_url();
-    ddtrace_log_debug(url);
-    free(url);
+    if (url && url[0]) {
+        size_t agent_url_len = strlen(url) + sizeof(TRACE_PATH_STR);
+        char *agent_url = malloc(agent_url_len);
+        sprintf(agent_url, "%s%s", url, TRACE_PATH_STR);
+        curl_easy_setopt(curl, CURLOPT_URL, agent_url);
+        char *message = malloc(16 + strlen(agent_url));
+        sprintf(message, "Send request to %s", agent_url);
+        ddtrace_log_debug(message);
+        free(url);
+        return;
+    }
+
     if (hostname) {
         size_t agent_url_len =
             strlen(hostname) + sizeof(HOST_FORMAT_STR) + 10;  // port digit allocation + some headroom

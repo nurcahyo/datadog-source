@@ -6,6 +6,7 @@
         "configuration_php_iface.h": "c",
         "atomic": "c",
         "cstdint": "c",
-        "compatibility.h": "c"
+        "compatibility.h": "c",
+        "logging.h": "c"
     }
 }

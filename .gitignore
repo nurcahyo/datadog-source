@@ -1,0 +1,4 @@
+*.lo
+*.log
+src/ext/.libs/*
+.libs/*
